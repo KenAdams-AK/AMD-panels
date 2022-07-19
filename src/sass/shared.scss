@@ -1,0 +1,38 @@
+$color-white: #ffffff;
+$color-black-primary: #141414;
+$color-blue-primary: #2f80ed;
+$color-blue-secondary: #d5e6f8;
+$color-grey: #777;
+$color-grey-light: #9597a1;
+$color-red-primary: #ee2126;
+$color-pink-primary: #FFEBEB;
+$color-blue-grey: #f9fbfe;
+
+$box-shadow-primary: 0px 4px 5px rgba(0, 0, 0, 0.14),
+	0px 1px 10px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.2);
+
+@mixin button {
+	color: $color-blue-primary;
+	background: $color-blue-secondary;
+	border: none;
+	border-radius: 16px;
+	padding: 8px 20px;
+	font-size: 14px;
+	font-family: "Rubik", sans-serif;
+	font-weight: 500;
+	cursor: pointer;
+
+	&:disabled {
+		color: $color-grey;
+	}
+
+	&:hover {
+		background: $color-blue-primary;
+		color: $color-blue-secondary;
+	}
+}
+
+@mixin title-page {
+	margin: 20px auto;
+	text-align: center;
+}

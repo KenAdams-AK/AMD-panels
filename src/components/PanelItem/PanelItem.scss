@@ -1,0 +1,40 @@
+@import '../../sass/shared.scss';
+
+.PanelItem {
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		width: 30vw;
+		min-width: 300px;
+		min-height: 200px;
+		padding: 10px 20px;
+		margin: 12px;
+		border-radius: 10px;
+		background-color: $color-pink-primary;
+		box-shadow: $box-shadow-primary;
+		transition: transform 200ms ease-in-out;
+
+		&:hover {
+			transform: scale(1.03);
+		}
+	}
+	
+	&__actions {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	&__button {
+		@include button;
+	}
+
+	&__button.add-to-favourites {
+		background: $color-blue-primary;
+		color: $color-blue-secondary;
+
+		&:hover{
+			transform: scale(1.1);
+		}
+	}
+}

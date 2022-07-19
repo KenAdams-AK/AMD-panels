@@ -1,0 +1,39 @@
+@import '../../sass/shared.scss';
+
+.Modal {
+	&__overlay {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba($color-black-primary, $alpha: 0.5);
+		backdrop-filter: blur(3px);
+	}
+
+	&__window {
+		display: flex;
+		flex-direction: column;
+		background-color: $color-white;
+		width: 30vw;
+		min-width: 300px;
+		padding: 25px;
+		margin: 0 auto;
+		border-radius: 10px;
+		position: relative;
+		top: 80px;
+	}
+
+	&__close-btn {
+		position: absolute;
+		right: 15px;
+		top: 10px;
+		@include button;
+	}
+
+	&__header {
+		font-style: normal;
+		font-weight: bold;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+}

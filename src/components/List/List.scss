@@ -1,0 +1,9 @@
+@import '../../sass/shared.scss';
+
+.List {
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	};
+}

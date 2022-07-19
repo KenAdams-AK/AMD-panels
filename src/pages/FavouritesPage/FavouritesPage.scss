@@ -1,0 +1,7 @@
+@import '../../sass/shared.scss';
+
+.FavouritesPage {
+	&__title {
+		@include title-page;
+	}
+}

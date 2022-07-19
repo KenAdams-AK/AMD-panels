@@ -1,0 +1,10 @@
+@import './sass/shared.scss';
+
+.App {
+  &__container {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    color: $color-black-primary;
+  }
+}
