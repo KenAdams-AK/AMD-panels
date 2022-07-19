@@ -42,10 +42,7 @@ const PanelItem = ({
 					{(isFavourite || isFavouritesPageOpen) && (
 						<button
 							className="PanelItem__button remove-from-favourites"
-							onClick={() => {
-								handleRemoveFavourites(panel);
-								setIsFavourite(false);
-							}}
+							onClick={() => handleRemoveFavourites(panel, setIsFavourite)}
 						>
 							Remove
 						</button>

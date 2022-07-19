@@ -36,11 +36,15 @@ function App() {
 		localStorage.setItem(LS_FAV_KEY, JSON.stringify(updatedFavourites));
 	};
 
-	const handleRemoveFavourites = (panel) => {
-		window.confirm("Remove from favourites?");
-		const updatedFavourites = favourites.filter((item) => item.id !== panel.id);
-		setFavourites(updatedFavourites);
-		localStorage.setItem(LS_FAV_KEY, JSON.stringify(updatedFavourites));
+	const handleRemoveFavourites = (panel, setIsFavourite) => {
+		if (window.confirm("Remove from favourites?")) {
+			const updatedFavourites = favourites.filter(
+				(item) => item.id !== panel.id
+			);
+			setFavourites(updatedFavourites);
+			localStorage.setItem(LS_FAV_KEY, JSON.stringify(updatedFavourites));
+			setIsFavourite(false);
+		}
 	};
 
 	return (

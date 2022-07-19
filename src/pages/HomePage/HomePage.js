@@ -16,7 +16,7 @@ const HomePage = ({
 
 	const renderPanels = (panel) => (
 		<PanelItem
-			key={panel.id}
+			key={panel?.id}
 			panel={panel}
 			favourites={favourites}
 			handleSetFavourites={handleSetFavourites}
