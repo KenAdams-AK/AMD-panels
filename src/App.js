@@ -21,11 +21,11 @@ function App() {
 		axios
 			.get(GET_PANELS_URL)
 			.then((response) => {
-				setPanels(response.data);
+				setPanels(response?.data);
 				setIsLoading(false);
 			})
 			.catch((error) => {
-				setGetDataError(error.message);
+				setGetDataError(error?.message);
 				setIsLoading(false);
 			});
 	}, []);
